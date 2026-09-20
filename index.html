@@ -46,11 +46,21 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
   body { background:#fff !important; margin:0; font-size:10px; }
   button { display:none !important; }
   @page { size:A4; margin:12mm; }
-  .check { background:#fff; }
   .signature-print-image { display:block !important; width:400px !important; height:80px !important; min-width:400px !important; max-width:none !important; min-height:80px !important; max-height:80px !important; }
   canvas.signature-pad { display:none !important; }
   .no-print { display:none !important; }
 }
+
+        /* Questions should flow like the original checklist, with no boxes. */
+        .check,
+        .check.question,
+        div.check {
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
 </style>
 </head>
 <body>
