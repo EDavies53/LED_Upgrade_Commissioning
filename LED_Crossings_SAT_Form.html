@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELV LED Upgrade Commissioning Checklist - Crossings</title>
+<meta name="description" content="ELV LED Upgrade Commissioning Checklist - Crossings">
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.2.0/dist/signature_pad.umd.min.js"></script>
+<style>
+html { font-family: Calibri, Arial, sans-serif; }
+body { background-color: powderblue; font-size: 10px; margin: 12px; color:#000; }
+h1 { text-align:center; font-size:24px; }
+h2 { font-size:18px; margin-top:20px; border-bottom:1px solid #555; padding-bottom:4px; }
+h3 { font-size:15px; }
+p { margin:6px 0; }
+.header-table, .sign-table, .timings { border-collapse:collapse; width:100%; }
+.header-table td { padding:4px; }
+input[type="text"], input[type="date"], textarea { box-sizing:border-box; }
+.header-input { width:100%; max-width:500px; }
+.check { background:#fff; border:1px solid #999; border-radius:4px; margin:7px 0; padding:8px; page-break-inside:avoid; }
+.question { font-weight:bold; line-height:1.35; }
+.qnum { display:inline-block; min-width:38px; }
+.answer { margin-top:6px; }
+.answer label { margin-right:12px; white-space:nowrap; }
+.answer input { transform:scale(1.05); }
+.comment-label { display:block; font-weight:bold; margin-top:6px; }
+textarea { width:100%; max-width:700px; }
+.measurement { margin-top:6px; font-weight:bold; }
+.small-input { width:90px; }
+.note { background:#fff3cd; padding:8px; border:1px solid #d6c36a; }
+.timings { background:#fff; margin:8px 0; }
+.timings th, .timings td { border:1px solid #888; padding:5px; vertical-align:top; }
+.timings th { background:#ddd; }
+.timing-input { width:120px; }
+.timing-pair { display:flex; gap:20px; flex-wrap:wrap; }
+.signature-pad { display:block; width:400px; height:80px; max-width:100%; touch-action:none; border:1px solid #000; background:#fff; }
+button { padding:6px 10px; margin:3px; cursor:pointer; }
+.signature-print-image { display:none; }
+@media screen and (max-width:700px) {
+  body { margin:8px; font-size:12px; }
+  h1 { font-size:22px; }
+  .check { padding:7px; }
+  .timings { font-size:11px; }
+}
+@media print {
+  body { background:#fff !important; margin:0; font-size:10px; }
+  button { display:none !important; }
+  @page { size:A4; margin:12mm; }
+  .check { background:#fff; }
+  .signature-print-image { display:block !important; width:400px !important; height:80px !important; min-width:400px !important; max-width:none !important; min-height:80px !important; max-height:80px !important; }
+  canvas.signature-pad { display:none !important; }
+  .no-print { display:none !important; }
+}
+</style>
+</head>
+<body>
+<button type="button" onclick="confirmRefresh()">Refresh Page</button>
+
+<h1><u>ELV LED UPGRADE COMMISSIONING CHECKLIST - CROSSINGS</u></h1>
+
+<p><b>This form is only to be used on the LED upgrade project where no signal design or site layout changes have been undertaken.</b></p>
+
+<table class="header-table">
+<tr><td><b>LOCATION</b></td><td><input class="header-input" type="text"></td></tr>
+<tr><td><b>SITE REF</b></td><td><input class="header-input" type="text"></td></tr>
+<tr><td><b>DATE</b></td><td><input type="date"></td></tr>
+</table>
+
+<p>The commissioning of Traffic Signals can be divided into two parts</p>
+<p>1 The checks that can be carried out before the controller is switched on<br>
+2 The checks that can be carried out after the controller is switched on.</p>
+<p>Part 1 should have been carried out in accordance with TR 2500A data sheets and is not covered in this document.</p>
+<p>Part 2 can be carried out in the absence of the signal company Engineer and it is suggested this is carried out before he arrives on site. One hour upwards should be allowed for this.</p>
+<p>Part 3 should be carried out in the presence of a signal company Engineer.</p>
+
+
+<section>
+<h2>PART 2 ON SITE - CONTROLLER SWITCHED OFF</h2>
+<p class="note"><b>NOTE:</b> If the installation does not have a satisfactory ELI reading then the signals MUST BE LEFT OFF and isolated from the incoming mains supply.</p>
+<div class="check">
+      <div class="question"><span class="qnum">3(a)</span> Obtain an Earth Loop Impedance (ELI) test reading for the installation and record the value below. This value must also be recorded on the Electrical test certificate supplied by the Traffic Signal contractor. The test can be carried out at the controller and must be witnessed at SAT. Pre-recorded readings will not be accepted.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_3_a_0" value="YES"> YES</label>
+        <label><input type="radio" name="q_3_a_0" value="NO"> NO</label>
+        <label><input type="radio" name="q_3_a_0" value="N/A"> N/A</label>
+      </div>
+      
+        <div class="measurement"><label>ELI reading at controller:</label>
+        <input type="text" class="small-input"> <span>ohms</span></div>
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+<div class="check">
+      <div class="question"><span class="qnum">3(b)</span> Check that the correct fuse has been fitted to the electricity board cut-out in the mini pillar</div>
+      <div class="answer">
+        <label><input type="radio" name="q_3_b_1" value="YES"> YES</label>
+        <label><input type="radio" name="q_3_b_1" value="NO"> NO</label>
+        <label><input type="radio" name="q_3_b_1" value="N/A"> N/A</label>
+      </div>
+      
+        <div class="measurement"><label>Fuse Rating:</label>
+        <input type="text" class="small-input"> <span>A</span></div>
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+<div class="check">
+      <div class="question"><span class="qnum">3(c)</span> Check that a secondary &#x27;double pole&#x27; cut-out and fuse has been fitted in the mini pillar. This fuse must be a smaller value than the electricity board cut-out fuse and larger than the controller fuse</div>
+      <div class="answer">
+        <label><input type="radio" name="q_3_c_2" value="YES"> YES</label>
+        <label><input type="radio" name="q_3_c_2" value="NO"> NO</label>
+        <label><input type="radio" name="q_3_c_2" value="N/A"> N/A</label>
+      </div>
+      
+        <div class="measurement"><label>Fuse Rating:</label>
+        <input type="text" class="small-input"> <span>A</span></div>
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+<div class="check">
+      <div class="question"><span class="qnum">3(d)</span> Check that all earth connections have been made to the Main Earth Terminal (MET) in the mini pillar and that the MET is connected to the neutral of the electricity Board&#x27;s cut-out.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_3_d_3" value="YES"> YES</label>
+        <label><input type="radio" name="q_3_d_3" value="NO"> NO</label>
+        <label><input type="radio" name="q_3_d_3" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+<div class="check">
+      <div class="question"><span class="qnum">3(e)</span> Check earth connections are in place from controller to the mini pillar MET</div>
+      <div class="answer">
+        <label><input type="radio" name="q_3_e_4" value="YES"> YES</label>
+        <label><input type="radio" name="q_3_e_4" value="NO"> NO</label>
+        <label><input type="radio" name="q_3_e_4" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+<div class="check">
+      <div class="question"><span class="qnum">3(f)</span> Check that a twin 5 Amp switched socket with RCD is left unoccupied and does not have ancillary equipment plugged into it.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_3_f_5" value="YES"> YES</label>
+        <label><input type="radio" name="q_3_f_5" value="NO"> NO</label>
+        <label><input type="radio" name="q_3_f_5" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+<div class="check">
+      <div class="question"><span class="qnum">4</span> Ensure a full size plot of the signal approval is left in the controller including signed approval front sheet.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_4_6" value="YES"> YES</label>
+        <label><input type="radio" name="q_4_6" value="NO"> NO</label>
+        <label><input type="radio" name="q_4_6" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+</section>
+
+<section>
+<h2>Layout</h2>
+<p><b>Signal Poles</b></p>
+<p>5 At each signal pole position the following should be checked:-</p>
+<section><h2></h2><div class="check">
+      <div class="question"><span class="qnum">6</span> The location of the poles and associated equipment shall agree with the signal approval plan.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_6_7" value="YES"> YES</label>
+        <label><input type="radio" name="q_6_7" value="NO"> NO</label>
+        <label><input type="radio" name="q_6_7" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">7</span> Height of centre of amber lens of signals above the pavement shall be 2.4m to 4.0m. The height may be limited to 2.65 to 3.1m as specified by ECC/SBC/TBC. It will be easier to measure to the bottom of the signal head body whereupon these measurements become 2.1 to 2.55m.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_7_8" value="YES"> YES</label>
+        <label><input type="radio" name="q_7_8" value="NO"> NO</label>
+        <label><input type="radio" name="q_7_8" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">8</span> Height to centre of a far-sided pedestrian signal head above pavement shall be 2.1 to 2.6m (measured to bottom of signal head body).</div>
+      <div class="answer">
+        <label><input type="radio" name="q_8_9" value="YES"> YES</label>
+        <label><input type="radio" name="q_8_9" value="NO"> NO</label>
+        <label><input type="radio" name="q_8_9" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">9</span> Check that all the visors are primary including closely associated signal head locations.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_9_10" value="YES"> YES</label>
+        <label><input type="radio" name="q_9_10" value="NO"> NO</label>
+        <label><input type="radio" name="q_9_10" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">10</span> Check that sighting screens are secured at the four corners</div>
+      <div class="answer">
+        <label><input type="radio" name="q_10_11" value="YES"> YES</label>
+        <label><input type="radio" name="q_10_11" value="NO"> NO</label>
+        <label><input type="radio" name="q_10_11" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">11</span> Check clearance between signal heads and carriageway which should be 0.46m minimum.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_11_12" value="YES"> YES</label>
+        <label><input type="radio" name="q_11_12" value="NO"> NO</label>
+        <label><input type="radio" name="q_11_12" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">12</span> Any new signal poles to be firmly located within a concrete foundation.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_12_13" value="YES"> YES</label>
+        <label><input type="radio" name="q_12_13" value="NO"> NO</label>
+        <label><input type="radio" name="q_12_13" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">13</span> All signal poles shall be permanently reinstated.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_13_14" value="YES"> YES</label>
+        <label><input type="radio" name="q_13_14" value="NO"> NO</label>
+        <label><input type="radio" name="q_13_14" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    </section>
+<p><b>Civil Works</b></p>
+<div class="check">
+      <div class="question"><span class="qnum">14</span> Check all Civil items on site to include in the as-built drawing and accurately note any variations from the signal approval drawing.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_14_15" value="YES"> YES</label>
+        <label><input type="radio" name="q_14_15" value="NO"> NO</label>
+        <label><input type="radio" name="q_14_15" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+<p><b>Miscellaneous</b></p>
+<div class="check">
+      <div class="question"><span class="qnum">15</span> Check that all signal and loop feeder cables are marked with their destination within the controller. All LV signal cable flags should be removed.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_15_16" value="YES"> YES</label>
+        <label><input type="radio" name="q_15_16" value="NO"> NO</label>
+        <label><input type="radio" name="q_15_16" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">16</span> Check that any new poles have been numbered in accordance with the approval drawing.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_16_17" value="YES"> YES</label>
+        <label><input type="radio" name="q_16_17" value="NO"> NO</label>
+        <label><input type="radio" name="q_16_17" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">17</span> Check that the controller cabinet has been identified with its site reference number (which should be visible from the carriageway).</div>
+      <div class="answer">
+        <label><input type="radio" name="q_17_18" value="YES"> YES</label>
+        <label><input type="radio" name="q_17_18" value="NO"> NO</label>
+        <label><input type="radio" name="q_17_18" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">18</span> Check that the 4G antenna has been installed on top of the controller cabinet.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_18_19" value="YES"> YES</label>
+        <label><input type="radio" name="q_18_19" value="NO"> NO</label>
+        <label><input type="radio" name="q_18_19" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">19</span> Check that the PE cell has been installed on the correct pole and is not beneath a lamp column or tree.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_19_20" value="YES"> YES</label>
+        <label><input type="radio" name="q_19_20" value="NO"> NO</label>
+        <label><input type="radio" name="q_19_20" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+</section>
+<section><h2>Signal Poles, Civil Works & Miscellaneous</h2>
+
+    <div class="check">
+      <div class="question"><span class="qnum">20</span> For controllers without a NAL base, the controller shall be sealed with a two-part epoxy resin. (NOTE: - This must be done before or at the time of commissioning.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_20_60" value="YES"> YES</label>
+        <label><input type="radio" name="q_20_60" value="NO"> NO</label>
+        <label><input type="radio" name="q_20_60" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">21</span> For controllers with a NAL base, cables shall be within individual rubber grommets and any unused holes shall have a rubber grommet fitted to maintain the integrity of the base. Multiple cables should not share the same rubber grommet.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_21_61" value="YES"> YES</label>
+        <label><input type="radio" name="q_21_61" value="NO"> NO</label>
+        <label><input type="radio" name="q_21_61" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+</section>
+
+<section>
+<h2>22 (A) PUFFIN &amp; NEAR SIDE TOUCAN CROSSING</h2>
+<table class="timings">
+<tr><th>Timing Required</th><th>Timing Criteria</th><th>Timings</th></tr>
+<tr><td><b>PERIOD 1 (Min Veh Green)</b></td><td>7 seconds for Puffins</td><td><input type="text" class="timing-input"></td></tr>
+<tr><td><b>PERIOD 2 (Stopping Amber)</b></td><td>Mandatory 3 seconds</td><td><input type="text" class="timing-input" value="3"></td></tr>
+<tr><td><b>PERIOD 3 (All Red Prior to Green Man)</b></td><td>1 second gap change unless SD, SA or UTC then 3 seconds.</td><td><input type="text" class="timing-input"></td></tr>
+<tr><td><b>PERIOD 4 (Green Signal)</b></td><td>Crossing &lt;7.5m = 4 seconds; Crossing &gt;7.5m &lt;10.5m = 5 seconds; Crossing &gt;10.5m &lt;12.5m = 6 seconds; Crossing &gt;12.5m = 7 seconds</td><td><input type="text" class="timing-input"></td></tr>
+<tr><td><b>PERIOD 5 (Min All Red)</b></td><td>Between 1 and 5 seconds (Normally 3)</td><td><input type="text" class="timing-input"></td></tr>
+<tr><td><b>PERIOD 6 (Max All Red)</b></td><td>5 + (1.67(length of crossing - 3m))- PERIOD7. NOTE: - Max 22 seconds</td><td><input type="text" class="timing-input"></td></tr>
+<tr><td><b>PERIOD 7 (All Red Clearance on Max)</b></td><td>Between 0 and 3 seconds. Set at 3 seconds</td><td><input type="text" class="timing-input" value="3"></td></tr>
+<tr><td><b>PERIOD 8 (All Red on Gap)</b></td><td>Between 0 and 3 seconds. Set at 0 seconds</td><td><input type="text" class="timing-input" value="0"></td></tr>
+<tr><td><b>PERIOD 9 (Red/Amber)</b></td><td>Mandatory 2 seconds</td><td><input type="text" class="timing-input" value="2"></td></tr>
+</table>
+<p><b>Maximum Vehicle Greens - Peak - 30 seconds - Off Peak - 20 seconds</b></p>
+<p>Peak Timings - AM - 07:00 to 09:30 &nbsp;&nbsp; Peak Timings - PM - 16:00 to 18:30</p>
+<p><b>Values to be entered by Commissioning Engineer (*)</b></p>
+</section>
+
+<section>
+<h2>22 (B) FAR SIDE TOUCAN CROSSING</h2>
+<table class="timings">
+<tr><th>Timing Required</th><th>Timing Criteria</th><th>Timings</th></tr>
+<tr><td><b>PERIOD I (Min Veh Green)</b></td><td>7 seconds for standalone Toucan (7 seconds for Southend B.C)</td><td><input type="text" class="timing-input"></td></tr>
+<tr><td><b>PERIOD II (Stopping Amber)</b></td><td>Mandatory 3 seconds</td><td><input type="text" class="timing-input" value="3"></td></tr>
+<tr><td><b>PERIOD III (All Red prior to Green Man/Green Cycle)</b></td><td>1 second gap change unless SD, SA or UTC then 3 seconds.</td><td><input type="text" class="timing-input"></td></tr>
+<tr><td><b>PERIOD IV (Green Signal)</b></td><td>Crossing &lt;7.5m = 4 seconds; Crossing &gt;7.5m &lt;10.5m = 5 seconds; Crossing &gt;10.5m &lt;12.5m = 6 seconds; Crossing &gt;12.5m = 7 seconds. NOTE: May be increased by two seconds dependant on pedestrian behaviour. (See LTN 2/95)</td><td><input type="text" class="timing-input"></td></tr>
+<tr><td><b>PERIOD V (Fixed Blackout)</b></td><td>3 seconds (Fixed)</td><td><input type="text" class="timing-input" value="3"></td></tr>
+<tr><td><b>PERIOD VI (Blackout Extension)</b></td><td>5 + (1.67(length of crossing - 3m)) - PERIOD 7. NOTE: - Max 22 seconds</td><td><input type="text" class="timing-input"></td></tr>
+<tr><td><b>PERIOD VII (Extension Clearance on Max)</b></td><td>Between 0 and 3 seconds. Set at 3 seconds</td><td><input type="text" class="timing-input" value="3"></td></tr>
+<tr><td><b>PERIOD VIII (All Red)</b></td><td>Between 0 and 3 seconds. Set at 0 seconds</td><td><input type="text" class="timing-input" value="0"></td></tr>
+<tr><td><b>PERIOD IX (Red/Amber)</b></td><td>Mandatory 2 seconds</td><td><input type="text" class="timing-input" value="2"></td></tr>
+</table>
+<p><b>Maximum Vehicle Greens - Peak - 30 seconds - Off Peak - 20 seconds</b></p>
+<p>Peak Timings - AM - 07:00 to 09:30 &nbsp;&nbsp; Peak Timings - PM - 16:00 to 18:30</p>
+<p><b>Values to be entered by Commissioning Engineer (*)</b></p>
+</section>
+
+<section><h2>PART 3 ON SITE - CONTROLLER SWITCHED ON</h2>
+<div class="check">
+      <div class="question"><span class="qnum">23</span> Prior to switching controller on, flash out each vehicle lamp, pedestrian green man, pedestrian red man and wait indicator to ensure that they illuminate when activated by the Traffic Signal Engineer.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_23_62" value="YES"> YES</label>
+        <label><input type="radio" name="q_23_62" value="NO"> NO</label>
+        <label><input type="radio" name="q_23_62" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">24</span> Switch lamps on and check that correct traffic movements take place in each stage. Be ready to switch lamps off if unexpected traffic movements take place and investigate accordingly.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_24_63" value="YES"> YES</label>
+        <label><input type="radio" name="q_24_63" value="NO"> NO</label>
+        <label><input type="radio" name="q_24_63" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">25</span> Check that all lamps on each approach are operating and in the correct sequence. PUFFINS &amp; NEAR SIDE TOUCAN - No signal for 12 seconds followed by red man and green to vehicles with latched pedestrian demand. FAR SIDE TOUCANS - No signal for 12 seconds followed by red man and green to vehicles with latched pedestrian demand.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_25_64" value="YES"> YES</label>
+        <label><input type="radio" name="q_25_64" value="NO"> NO</label>
+        <label><input type="radio" name="q_25_64" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">26</span> Check that all far-sided/near-sided pedestrian aspects are working and in the correct sequence.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_26_65" value="YES"> YES</label>
+        <label><input type="radio" name="q_26_65" value="NO"> NO</label>
+        <label><input type="radio" name="q_26_65" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">27</span> Check operation of signal dimming by covering PE cell and observing signal aspects. Dimming voltage to be 27.5v for ELV sites.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_27_66" value="YES"> YES</label>
+        <label><input type="radio" name="q_27_66" value="NO"> NO</label>
+        <label><input type="radio" name="q_27_66" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">28</span> Check that signal dimming is wired in (I.e. installation should be permanently bright.)</div>
+      <div class="answer">
+        <label><input type="radio" name="q_28_67" value="YES"> YES</label>
+        <label><input type="radio" name="q_28_67" value="NO"> NO</label>
+        <label><input type="radio" name="q_28_67" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">29</span> The primary signal heads shall be aligned as follows:- On a high speed approach at a point 1.5m above the carriageway on the centre line 200m from the signals. Otherwise, at a point 1.5m above carriageway on the centre line 50m from the stop line.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_29_68" value="YES"> YES</label>
+        <label><input type="radio" name="q_29_68" value="NO"> NO</label>
+        <label><input type="radio" name="q_29_68" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">30</span> On each approach the height of the centre of the amber lens of each signal head above the carriageway shall be the same.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_30_69" value="YES"> YES</label>
+        <label><input type="radio" name="q_30_69" value="NO"> NO</label>
+        <label><input type="radio" name="q_30_69" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">31</span> The secondary signal heads should be angled towards a point 1.5m above the carriageway in the nearside channel of approach 25m from the stop line.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_31_70" value="YES"> YES</label>
+        <label><input type="radio" name="q_31_70" value="NO"> NO</label>
+        <label><input type="radio" name="q_31_70" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">32</span> Far-sided pedestrian signal heads should be directed to the centre of the crossing at the opposite kerb.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_32_71" value="YES"> YES</label>
+        <label><input type="radio" name="q_32_71" value="NO"> NO</label>
+        <label><input type="radio" name="q_32_71" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">33</span> Near-sided pedestrian signal heads should be angled at an angle where the aspect is clearly visible at the point where pedestrians normally wait to cross.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_33_72" value="YES"> YES</label>
+        <label><input type="radio" name="q_33_72" value="NO"> NO</label>
+        <label><input type="radio" name="q_33_72" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+</section>
+<section><h2>Controller Operation</h2>
+
+    <div class="check">
+      <div class="question"><span class="qnum">34</span> The illumination of the red and green man aspects shall be uniform.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_34_80" value="YES"> YES</label>
+        <label><input type="radio" name="q_34_80" value="NO"> NO</label>
+        <label><input type="radio" name="q_34_80" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+</section>
+
+<section><h2>Controller Operation</h2>
+<div class="check">
+      <div class="question"><span class="qnum">35</span> Check timing from signal aspects as set up in the controller - as in section 21</div>
+      <div class="answer">
+        <label><input type="radio" name="q_35_81" value="YES"> YES</label>
+        <label><input type="radio" name="q_35_81" value="NO"> NO</label>
+        <label><input type="radio" name="q_35_81" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">36</span> Check operation of all manual switches in the controller. These may include: Lamps On/Off; Continuous Pedestrian/Cycle Demand; Fixed Time Operation (FVP); Continuius Vehicle Extension; LED Fault Test (LED&#x27;s within maual panel to illuminate)</div>
+      <div class="answer">
+        <label><input type="radio" name="q_36_82" value="YES"> YES</label>
+        <label><input type="radio" name="q_36_82" value="NO"> NO</label>
+        <label><input type="radio" name="q_36_82" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">37</span> Check that the controller is operating in the correct mode.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_37_83" value="YES"> YES</label>
+        <label><input type="radio" name="q_37_83" value="NO"> NO</label>
+        <label><input type="radio" name="q_37_83" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">38</span> Check the time clock is set at correct time, day and week number.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_38_84" value="YES"> YES</label>
+        <label><input type="radio" name="q_38_84" value="NO"> NO</label>
+        <label><input type="radio" name="q_38_84" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+</section>
+
+<section><h2>Detection</h2>
+<div class="check">
+      <div class="question"><span class="qnum">39</span> Check operation of detector loops by observing operation of detector unit channels. The detector channel L.E.D&#x27;s should come on as vehicles pass over the detector loops.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_39_85" value="YES"> YES</label>
+        <label><input type="radio" name="q_39_85" value="NO"> NO</label>
+        <label><input type="radio" name="q_39_85" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">40</span> There shall be separate detector packs or channels for each approach.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_40_86" value="YES"> YES</label>
+        <label><input type="radio" name="q_40_86" value="NO"> NO</label>
+        <label><input type="radio" name="q_40_86" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">41</span> Check that the VA detector units are set to the appropriate setting for sensitivity and detuning time. (E.g. Sensitivity = High, Presence = 3 to 4 minutes)</div>
+      <div class="answer">
+        <label><input type="radio" name="q_41_87" value="YES"> YES</label>
+        <label><input type="radio" name="q_41_87" value="NO"> NO</label>
+        <label><input type="radio" name="q_41_87" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">42</span> Check operation and alignment of Above Ground Detectors. The L.E.D. indicator on the AGD should illuminate when vehicles are 39m from stop line (minimum).</div>
+      <div class="answer">
+        <label><input type="radio" name="q_42_88" value="YES"> YES</label>
+        <label><input type="radio" name="q_42_88" value="NO"> NO</label>
+        <label><input type="radio" name="q_42_88" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">43</span> AGD cables should be neatly zip-tied or wrapped to top signals head bracket, with no cables hanging loose.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_43_89" value="YES"> YES</label>
+        <label><input type="radio" name="q_43_89" value="NO"> NO</label>
+        <label><input type="radio" name="q_43_89" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">44</span> Check that detector channels &amp; AGD’s are correctly connected to the controller logic by checking the controller or handset display against the detector, unit display or vehicle passage over the detector loops. Ensure all detectors/push buttons are included in the DFM.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_44_90" value="YES"> YES</label>
+        <label><input type="radio" name="q_44_90" value="NO"> NO</label>
+        <label><input type="radio" name="q_44_90" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+</section>
+<section><h2>Detection</h2>
+
+    <div class="check">
+      <div class="question"><span class="qnum">45</span> Check Vehicle extension times are correct.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_45_100" value="YES"> YES</label>
+        <label><input type="radio" name="q_45_100" value="NO"> NO</label>
+        <label><input type="radio" name="q_45_100" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">46</span> Ensure AGD&#x27;s are wired in using plugs and sockets. If the detectors are hardwired in please note as an outstanding issue at the end of this commissioning sheet.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_46_101" value="YES"> YES</label>
+        <label><input type="radio" name="q_46_101" value="NO"> NO</label>
+        <label><input type="radio" name="q_46_101" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">47</span> Check correct operation under VA control. The controller should be observed to make a minimum change, a gap change and a maximum change where site conditions allow.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_47_102" value="YES"> YES</label>
+        <label><input type="radio" name="q_47_102" value="NO"> NO</label>
+        <label><input type="radio" name="q_47_102" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">48</span> For sites without SDE, consider the controller is set to PRE-TIMED MAX mode and check operation accordingly. For sites with SDE ensure PRE-TIMED MAX mode is not set.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_48_103" value="YES"> YES</label>
+        <label><input type="radio" name="q_48_103" value="NO"> NO</label>
+        <label><input type="radio" name="q_48_103" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">49</span> Check push buttons operate and illuminate wait indicators. Buttons should not operate when the green man is showing. The wait indicator should go off when the green man comes on.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_49_104" value="YES"> YES</label>
+        <label><input type="radio" name="q_49_104" value="NO"> NO</label>
+        <label><input type="radio" name="q_49_104" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+</section>
+
+<section><h2>Puffin/Toucan Facilities</h2>
+<div class="check">
+      <div class="question"><span class="qnum">50</span> Check that all Kerbside detectors are set up to detect within the area that is occupied by pedestrians waiting to cross. Ensure at least the push button and the front two rows of the tactile paving are covered by the detectors footprint.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_50_105" value="YES"> YES</label>
+        <label><input type="radio" name="q_50_105" value="NO"> NO</label>
+        <label><input type="radio" name="q_50_105" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">51</span> Carry out tests to ensure the Kerbside detectors call and cancel pedestrian demands, including a latched test without a kerbside detect.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_51_106" value="YES"> YES</label>
+        <label><input type="radio" name="q_51_106" value="NO"> NO</label>
+        <label><input type="radio" name="q_51_106" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">52</span> Check that all On-crossing detectors are set up to detect the crossing path and ensure that the road width is covered by the On-crossing detectors.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_52_107" value="YES"> YES</label>
+        <label><input type="radio" name="q_52_107" value="NO"> NO</label>
+        <label><input type="radio" name="q_52_107" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">53</span> PUFFINS &amp; NEARSIDE TOUCANS - Carry out tests to ensure the On-crossing detectors extend the All Red period.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_53_108" value="YES"> YES</label>
+        <label><input type="radio" name="q_53_108" value="NO"> NO</label>
+        <label><input type="radio" name="q_53_108" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">54</span> FAR SIDED TOUCANS - Carry out tests to ensure the On-crossing detectors extend the Blackout period.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_54_109" value="YES"> YES</label>
+        <label><input type="radio" name="q_54_109" value="NO"> NO</label>
+        <label><input type="radio" name="q_54_109" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+</section>
+
+<section><h2>Speed Control</h2>
+<div class="check">
+      <div class="question"><span class="qnum">55</span> Speed Discrimination (Double SDE) - check for 3 second green extensions for vehicles travelling over 30mph up to phase maximum.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_55_110" value="YES"> YES</label>
+        <label><input type="radio" name="q_55_110" value="NO"> NO</label>
+        <label><input type="radio" name="q_55_110" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">56</span> Speed assessment - check for 5 second additional fixed green extension for vehicles travelling over 28mph. Following intergreen should extend by an additional 2 seconds.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_56_111" value="YES"> YES</label>
+        <label><input type="radio" name="q_56_111" value="NO"> NO</label>
+        <label><input type="radio" name="q_56_111" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+</section>
+
+<section><h2>Audible and Tactile Units</h2>
+<div class="check">
+      <div class="question"><span class="qnum">57</span> Check all audible units operate satisfactorily and adjust volume according to site requirements</div>
+      <div class="answer">
+        <label><input type="radio" name="q_57_112" value="YES"> YES</label>
+        <label><input type="radio" name="q_57_112" value="NO"> NO</label>
+        <label><input type="radio" name="q_57_112" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+</section>
+<section><h2>Puffin/Toucan Facilities</h2>
+
+    <div class="check">
+      <div class="question"><span class="qnum">58</span> Where tactile signals are provided, check correct operation of all tactile units and that they have been installed on the right hand side of the bottom of the push button unit.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_58_120" value="YES"> YES</label>
+        <label><input type="radio" name="q_58_120" value="NO"> NO</label>
+        <label><input type="radio" name="q_58_120" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">59</span> Check that the audible signal can be heard from the adjacent crossing point but is not so loud that it causes undue disturbance.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_59_121" value="YES"> YES</label>
+        <label><input type="radio" name="q_59_121" value="NO"> NO</label>
+        <label><input type="radio" name="q_59_121" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">60</span> Where audibles are provided all pedestrian phases shall display a green man simutaneously and the audible signals shall commence and terminate with the green man.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_60_122" value="YES"> YES</label>
+        <label><input type="radio" name="q_60_122" value="NO"> NO</label>
+        <label><input type="radio" name="q_60_122" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">61</span> With assistance from signal contractor check within pedestrian demand units or combined nearside units that audible units are installed correctly. Check in particular the audible unit bracket is installed the &#x27;correct way round&#x27; as not to cause a short against the wait board</div>
+      <div class="answer">
+        <label><input type="radio" name="q_61_123" value="YES"> YES</label>
+        <label><input type="radio" name="q_61_123" value="NO"> NO</label>
+        <label><input type="radio" name="q_61_123" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+</section>
+
+<section><h2>Urban Traffic Control</h2>
+<div class="check">
+      <div class="question"><span class="qnum">62</span> Check that a suitable OTU and router is fitted.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_62_124" value="YES"> YES</label>
+        <label><input type="radio" name="q_62_124" value="NO"> NO</label>
+        <label><input type="radio" name="q_62_124" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+</section>
+<section><h2>Speed Control</h2>
+
+    <div class="check">
+      <div class="question"><span class="qnum">63</span> Ensure that IP address is noted in the controller log book.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_63_150" value="YES"> YES</label>
+        <label><input type="radio" name="q_63_150" value="NO"> NO</label>
+        <label><input type="radio" name="q_63_150" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">64</span> Check that a suitable communications line or 4G aerial is connected to the OTU/router.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_64_151" value="YES"> YES</label>
+        <label><input type="radio" name="q_64_151" value="NO"> NO</label>
+        <label><input type="radio" name="q_64_151" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">65</span> Carry out suitable check with instation to confirm communication to OTU</div>
+      <div class="answer">
+        <label><input type="radio" name="q_65_152" value="YES"> YES</label>
+        <label><input type="radio" name="q_65_152" value="NO"> NO</label>
+        <label><input type="radio" name="q_65_152" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+</section>
+
+<section><h2>Remote Monitoring</h2>
+<div class="check">
+      <div class="question"><span class="qnum">66</span> GSM - Check that a suitable OMCU is fitted and a SIM card is provided to the Installation Contractor.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_66_153" value="YES"> YES</label>
+        <label><input type="radio" name="q_66_153" value="NO"> NO</label>
+        <label><input type="radio" name="q_66_153" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+</section>
+<section><h2>Remote Monitoring</h2>
+
+    <div class="check">
+      <div class="question"><span class="qnum">67</span> NON GSM - Check that a suitable communication line is connected to the OMCU.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_67_160" value="YES"> YES</label>
+        <label><input type="radio" name="q_67_160" value="NO"> NO</label>
+        <label><input type="radio" name="q_67_160" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">68</span> Ensure suitable checks are conducted for the OMCU Commissioning via the instation.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_68_161" value="YES"> YES</label>
+        <label><input type="radio" name="q_68_161" value="NO"> NO</label>
+        <label><input type="radio" name="q_68_161" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    
+</section>
+
+<section><h2>Red Lamp Monitoring</h2>
+<div class="check">
+      <div class="question"><span class="qnum">69</span> Simulate one red lamp failure. Check for additional intergreen if configured.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_69_162" value="YES"> YES</label>
+        <label><input type="radio" name="q_69_162" value="NO"> NO</label>
+        <label><input type="radio" name="q_69_162" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+</section>
+<section><h2>Red Lamp Monitoring</h2>
+
+    <div class="check">
+      <div class="question"><span class="qnum">70</span> Simulate two red lamp failures on each approach to check controller shuts down with RLM failure</div>
+      <div class="answer">
+        <label><input type="radio" name="q_70_170" value="YES"> YES</label>
+        <label><input type="radio" name="q_70_170" value="NO"> NO</label>
+        <label><input type="radio" name="q_70_170" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+</section>
+<section><h2>Miscellaneous</h2>
+
+    
+</section>
+
+<section><h2>Miscellaneous</h2>
+<div class="check">
+      <div class="question"><span class="qnum">71</span> Installation Contractor to submit cable test results/schematic cable diagram if requested by Engineer.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_71_180" value="YES"> YES</label>
+        <label><input type="radio" name="q_71_180" value="NO"> NO</label>
+        <label><input type="radio" name="q_71_180" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">72</span> Installation Contractor to submit a Earth Loop Impedance (ELI) test certificate. (Signals MUST NOT be left on unless this document is provided).</div>
+      <div class="answer">
+        <label><input type="radio" name="q_72_181" value="YES"> YES</label>
+        <label><input type="radio" name="q_72_181" value="NO"> NO</label>
+        <label><input type="radio" name="q_72_181" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">73</span> Installation Contractor to submit a Take Over Certificate. (Signals MUST NOT be left on unless this is provided).</div>
+      <div class="answer">
+        <label><input type="radio" name="q_73_182" value="YES"> YES</label>
+        <label><input type="radio" name="q_73_182" value="NO"> NO</label>
+        <label><input type="radio" name="q_73_182" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+
+    <div class="check">
+      <div class="question"><span class="qnum">74</span> Photos of the completed site are to be taken for site records. Photos are to include each approach, the inside of the controller and any snagged or missing items.</div>
+      <div class="answer">
+        <label><input type="radio" name="q_74_183" value="YES"> YES</label>
+        <label><input type="radio" name="q_74_183" value="NO"> NO</label>
+        <label><input type="radio" name="q_74_183" value="N/A"> N/A</label>
+      </div>
+      
+      <label class="comment-label">Additional comments:</label>
+      <textarea rows="2" placeholder="Enter notes here:"></textarea>
+    </div>
+</section>
+
+<section>
+<h2>Final Sign Off</h2>
+<table class="header-table">
+<tr><td><b>Date/Time of Commissioning</b></td><td><input type="text"></td></tr>
+</table>
+<h3>Engineers Signature(s)</h3>
+<table class="sign-table">
+<tr><td>Name:</td><td><input type="text"></td><td>Company:</td><td><input type="text"></td></tr>
+<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" id="signature-pad-1" width="400" height="80"></canvas><button type="button" id="clear-1">Clear</button></td></tr>
+<tr><td>Name:</td><td><input type="text"></td><td>Company:</td><td><input type="text"></td></tr>
+<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" id="signature-pad-2" width="400" height="80"></canvas><button type="button" id="clear-2">Clear</button></td></tr>
+<tr><td>Name:</td><td><input type="text"></td><td>Company:</td><td><input type="text"></td></tr>
+<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" id="signature-pad-3" width="400" height="80"></canvas><button type="button" id="clear-3">Clear</button></td></tr>
+<tr><td>Name:</td><td><input type="text"></td><td>Company:</td><td><input type="text"></td></tr>
+<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" id="signature-pad-4" width="400" height="80"></canvas><button type="button" id="clear-4">Clear</button></td></tr>
+</table>
+
+<h3>Attendance (Print names)</h3>
+<table class="header-table">
+<tr><td>Essex Highways</td><td><input type="text"></td></tr>
+<tr><td>Essex Highways</td><td><input type="text"></td></tr>
+<tr><td>Installation</td><td><input type="text"></td></tr>
+<tr><td>Installation</td><td><input type="text"></td></tr>
+</table>
+</section>
+
+<section>
+<h2>OUTSTANDING WORK AT TIME OF COMMISSIONING</h2>
+<h3>Traffic Signals</h3>
+<textarea rows="4"></textarea>
+<h3>Civils</h3>
+<textarea rows="4"></textarea>
+<p><b>COPY AND PASS TO MAINTENANCE DEPARTMENT</b></p>
+</section>
+
+<div class="no-print">
+<button type="button" id="clear-document">Clear Document</button>
+<button type="button" onclick="window.print()">Print This Page</button>
+</div>
+
+<script>
+function confirmRefresh() {
+  if (confirm("Are you sure you want to refresh the page?")) location.reload();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  function setupSignaturePad(canvasId, clearId) {
+    var canvas=document.getElementById(canvasId), clearButton=document.getElementById(clearId);
+    if(!canvas || !clearButton) return null;
+    canvas.style.width="400px"; canvas.style.height="80px"; canvas.style.maxWidth="100%"; canvas.style.touchAction="none";
+    var pad=new SignaturePad(canvas, {backgroundColor:"rgb(255,255,255)", minWidth:0.8, maxWidth:2.2, throttle:0});
+    function resizeCanvas() {
+      var ratio=Math.max(window.devicePixelRatio||1,1);
+      var rect=canvas.getBoundingClientRect();
+      var data=pad.isEmpty()?null:pad.toData();
+      canvas.width=Math.round(rect.width*ratio);
+      canvas.height=Math.round(rect.height*ratio);
+      canvas.getContext("2d").setTransform(ratio,0,0,ratio,0,0);
+      if(data) pad.fromData(data); else pad.clear();
+    }
+    resizeCanvas();
+    clearButton.addEventListener("click", function(e) {
+      e.preventDefault(); e.stopPropagation(); pad.clear();
+      var img=canvas.parentNode.querySelector(".signature-print-image"); if(img) img.src="";
+    });
+    window.addEventListener("resize", resizeCanvas);
+    window.addEventListener("orientationchange", function(){setTimeout(resizeCanvas,100);});
+    return pad;
+  }
+
+  var signaturePad1=setupSignaturePad("signature-pad-1","clear-1");
+  var signaturePad2=setupSignaturePad("signature-pad-2","clear-2");
+  var signaturePad3=setupSignaturePad("signature-pad-3","clear-3");
+  var signaturePad4=setupSignaturePad("signature-pad-4","clear-4");
+
+  function makePrintImage(id) {
+    var canvas=document.getElementById(id); if(!canvas) return;
+    var img=document.createElement("img");
+    img.className="signature-print-image"; img.width=400; img.height=80;
+    try { img.src=canvas.toDataURL("image/png"); } catch(e) {}
+    canvas.parentNode.insertBefore(img,canvas.nextSibling);
+  }
+  function syncPrintImage(id) {
+    var canvas=document.getElementById(id), img=canvas && canvas.parentNode.querySelector(".signature-print-image");
+    if(canvas && img) try {img.src=canvas.toDataURL("image/png");} catch(e) {}
+  }
+  ["1","2","3","4"].forEach(function(n) {
+    makePrintImage("signature-pad-"+n);
+    var c=document.getElementById("signature-pad-"+n);
+    if(c) c.addEventListener("pointerup",function(){syncPrintImage("signature-pad-"+n);});
+  });
+
+  document.getElementById("clear-document").addEventListener("click", function(e) {
+    e.preventDefault(); e.stopPropagation();
+    document.querySelectorAll('input[type="text"], input[type="date"], textarea').forEach(function(x){x.value="";});
+    document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(function(x){x.checked=false;});
+    [signaturePad1,signaturePad2,signaturePad3,signaturePad4].forEach(function(p){if(p)p.clear();});
+    document.querySelectorAll(".signature-print-image").forEach(function(img){img.src="";});
+  });
+});
+</script>
+</body>
+</html>
+
+</section>
+
+<section>
+<h2>Final Sign Off</h2>
+<table class="header-table">
+<tr><td><b>Date/Time of Commissioning</b></td><td><input type="text"></td></tr>
+</table>
+<h3>Engineers Signature(s)</h3>
+<table class="sign-table">
+<tr><td>Name:</td><td><input type="text"></td><td>Company:</td><td><input type="text"></td></tr>
+<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" id="signature-pad-1" width="400" height="80"></canvas><button type="button" id="clear-1">Clear</button></td></tr>
+<tr><td>Name:</td><td><input type="text"></td><td>Company:</td><td><input type="text"></td></tr>
+<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" id="signature-pad-2" width="400" height="80"></canvas><button type="button" id="clear-2">Clear</button></td></tr>
+<tr><td>Name:</td><td><input type="text"></td><td>Company:</td><td><input type="text"></td></tr>
+<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" id="signature-pad-3" width="400" height="80"></canvas><button type="button" id="clear-3">Clear</button></td></tr>
+<tr><td>Name:</td><td><input type="text"></td><td>Company:</td><td><input type="text"></td></tr>
+<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" id="signature-pad-4" width="400" height="80"></canvas><button type="button" id="clear-4">Clear</button></td></tr>
+</table>
+
+<h3>Attendance (Print names)</h3>
+<table class="header-table">
+<tr><td>Essex Highways</td><td><input type="text"></td></tr>
+<tr><td>Essex Highways</td><td><input type="text"></td></tr>
+<tr><td>Installation</td><td><input type="text"></td></tr>
+<tr><td>Installation</td><td><input type="text"></td></tr>
+</table>
+</section>
+
+<section>
+<h2>OUTSTANDING WORK AT TIME OF COMMISSIONING</h2>
+<h3>Traffic Signals</h3>
+<textarea rows="4"></textarea>
+<h3>Civils</h3>
+<textarea rows="4"></textarea>
+<p><b>COPY AND PASS TO MAINTENANCE DEPARTMENT</b></p>
+</section>
+
+<div class="no-print">
+<button type="button" id="clear-document">Clear Document</button>
+<button type="button" onclick="window.print()">Print This Page</button>
+</div>
+
+<script>
+function confirmRefresh() {
+  if (confirm("Are you sure you want to refresh the page?")) location.reload();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  function setupSignaturePad(canvasId, clearId) {
+    var canvas=document.getElementById(canvasId), clearButton=document.getElementById(clearId);
+    if(!canvas || !clearButton) return null;
+    canvas.style.width="400px"; canvas.style.height="80px"; canvas.style.maxWidth="100%"; canvas.style.touchAction="none";
+    var pad=new SignaturePad(canvas, {backgroundColor:"rgb(255,255,255)", minWidth:0.8, maxWidth:2.2, throttle:0});
+    function resizeCanvas() {
+      var ratio=Math.max(window.devicePixelRatio||1,1);
+      var rect=canvas.getBoundingClientRect();
+      var data=pad.isEmpty()?null:pad.toData();
+      canvas.width=Math.round(rect.width*ratio);
+      canvas.height=Math.round(rect.height*ratio);
+      canvas.getContext("2d").setTransform(ratio,0,0,ratio,0,0);
+      if(data) pad.fromData(data); else pad.clear();
+    }
+    resizeCanvas();
+    clearButton.addEventListener("click", function(e) {
+      e.preventDefault(); e.stopPropagation(); pad.clear();
+      var img=canvas.parentNode.querySelector(".signature-print-image"); if(img) img.src="";
+    });
+    window.addEventListener("resize", resizeCanvas);
+    window.addEventListener("orientationchange", function(){setTimeout(resizeCanvas,100);});
+    return pad;
+  }
+
+  var signaturePad1=setupSignaturePad("signature-pad-1","clear-1");
+  var signaturePad2=setupSignaturePad("signature-pad-2","clear-2");
+  var signaturePad3=setupSignaturePad("signature-pad-3","clear-3");
+  var signaturePad4=setupSignaturePad("signature-pad-4","clear-4");
+
+  function makePrintImage(id) {
+    var canvas=document.getElementById(id); if(!canvas) return;
+    var img=document.createElement("img");
+    img.className="signature-print-image"; img.width=400; img.height=80;
+    try { img.src=canvas.toDataURL("image/png"); } catch(e) {}
+    canvas.parentNode.insertBefore(img,canvas.nextSibling);
+  }
+  function syncPrintImage(id) {
+    var canvas=document.getElementById(id), img=canvas && canvas.parentNode.querySelector(".signature-print-image");
+    if(canvas && img) try {img.src=canvas.toDataURL("image/png");} catch(e) {}
+  }
+  ["1","2","3","4"].forEach(function(n) {
+    makePrintImage("signature-pad-"+n);
+    var c=document.getElementById("signature-pad-"+n);
+    if(c) c.addEventListener("pointerup",function(){syncPrintImage("signature-pad-"+n);});
+  });
+
+  document.getElementById("clear-document").addEventListener("click", function(e) {
+    e.preventDefault(); e.stopPropagation();
+    document.querySelectorAll('input[type="text"], input[type="date"], textarea').forEach(function(x){x.value="";});
+    document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(function(x){x.checked=false;});
+    [signaturePad1,signaturePad2,signaturePad3,signaturePad4].forEach(function(p){if(p)p.clear();});
+    document.querySelectorAll(".signature-print-image").forEach(function(img){img.src="";});
+  });
+});
+</script>
+</body>
+</html>
