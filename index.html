@@ -85,12 +85,30 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 @media print {
   .section-toggle { display:none !important; }
 }
+
+.heading-na {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: normal;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+.heading-na input {
+  margin: 0 4px 0 0;
+}
+.project-notice {
+  border: 2px solid #000 !important;
+  padding: 8px 10px !important;
+  margin: 12px 0 !important;
+  background: transparent !important;
+}
 </style>
 </head>
 <body>
 <button onclick="confirmRefresh()" type="button">Refresh Page</button>
 <h1><u>ELV LED UPGRADE COMMISSIONING CHECKLIST - CROSSINGS</u></h1>
-<p><b>This form is only to be used on the LED upgrade project where no signal design or site layout changes have been undertaken.</b></p>
+<p class="project-notice"><b>This form is only to be used on the LED upgrade project where no signal design or site layout changes have been undertaken.</b></p>
 <table class="header-table">
 <tr><td><b>LOCATION</b></td><td><input class="header-input" type="text"/></td></tr>
 <tr><td><b>SITE REF</b></td><td><input class="header-input" type="text"/></td></tr>
@@ -330,7 +348,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-<section><h2>Signal Poles, Civil Works &amp; Miscellaneous</h2>
+<h2>Signal Poles, Civil Works &amp; Miscellaneous</h2>
 <div class="check">
 <div class="question"><span class="qnum">20</span> For controllers without a NAL base, the controller shall be sealed with a two-part epoxy resin. (NOTE: - This must be done before or at the time of commissioning.</div>
 <div class="answer">
@@ -351,9 +369,8 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
-</section>
-<div class="section-toggle"><label><input data-section-toggle="na-22a" type="checkbox"/> N/A - Hide 22 (A) PUFFIN &amp; NEAR SIDE TOUCAN CROSSING</label></div><section id="na-22a">
-<h2>22 (A) PUFFIN &amp; NEAR SIDE TOUCAN CROSSING</h2>
+<section id="na-22a">
+<h2>22 (A) PUFFIN &amp; NEAR SIDE TOUCAN CROSSING  <label class="heading-na"><input data-section-toggle="na-22a" type="checkbox"/> N/A</label></h2>
 <table class="timings">
 <tr><th>Timing Required</th><th>Timing Criteria</th><th>Timings</th></tr>
 <tr><td><b>PERIOD 1 (Min Veh Green)</b></td><td>7 seconds for Puffins</td><td><input class="timing-input" type="text"/></td></tr>
@@ -370,8 +387,8 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <p>Peak Timings - AM - 07:00 to 09:30    Peak Timings - PM - 16:00 to 18:30</p>
 <p><b>Values to be entered by Commissioning Engineer (*)</b></p>
 </section>
-<div class="section-toggle"><label><input data-section-toggle="na-22b" type="checkbox"/> N/A - Hide 22 (B) FAR SIDE TOUCAN CROSSING</label></div><section id="na-22b">
-<h2>22 (B) FAR SIDE TOUCAN CROSSING</h2>
+<section id="na-22b">
+<h2>22 (B) FAR SIDE TOUCAN CROSSING  <label class="heading-na"><input data-section-toggle="na-22b" type="checkbox"/> N/A</label></h2>
 <table class="timings">
 <tr><th>Timing Required</th><th>Timing Criteria</th><th>Timings</th></tr>
 <tr><td><b>PERIOD I (Min Veh Green)</b></td><td>7 seconds for standalone Toucan (7 seconds for Southend B.C)</td><td><input class="timing-input" type="text"/></td></tr>
@@ -410,7 +427,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 <div class="check">
-<div class="question"><span class="qnum">25</span> Check that all lamps on each approach are operating and in the correct sequence.<br/><span class="sub-question-text">PUFFINS &amp; NEAR SIDE TOUCAN - No signal for 12 seconds followed by red man and green to vehicles with latched pedestrian demand. FAR SIDE TOUCANS - No signal for 12 seconds followed by red man and green to vehicles with latched pedestrian demand.</span></div>
+<div class="question"><span class="qnum">25</span> Check that all lamps on each approach are operating and in the correct sequence.<br/><span class="sub-question-text">PUFFINS &amp; NEAR SIDE TOUCAN - No signal for 12 seconds followed by red man and green to vehicles with latched pedestrian demand.<br/>FAR SIDE TOUCANS - No signal for 12 seconds followed by red man and green to vehicles with latched pedestrian demand.</span></div>
 <div class="answer">
 <label><input name="q_25_64" type="radio" value="YES"/> YES</label>
 <label><input name="q_25_64" type="radio" value="NO"/> NO</label>
@@ -450,7 +467,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 <div class="check">
-<div class="question"><span class="qnum">29</span> The primary signal heads shall be aligned as follows:- On a high speed approach at a point 1.5m above the carriageway on the centre line 200m from the signals. Otherwise, at a point 1.5m above carriageway on the centre line 50m from the stop line.</div>
+<h3>Signal Head Alignment and Illumination</h3><div class="question"><span class="qnum">29</span> The primary signal heads shall be aligned as follows:- On a high speed approach at a point 1.5m above the carriageway on the centre line 200m from the signals. Otherwise, at a point 1.5m above carriageway on the centre line 50m from the stop line.</div>
 <div class="answer">
 <label><input name="q_29_68" type="radio" value="YES"/> YES</label>
 <label><input name="q_29_68" type="radio" value="NO"/> NO</label>
@@ -500,7 +517,6 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-
 <section>
 <div class="check">
 <div class="question"><span class="qnum">34</span> The illumination of the red and green man aspects shall be uniform.</div>
@@ -615,7 +631,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
-<h2>Detection</h2>
+
 <div class="check">
 <div class="question"><span class="qnum">45</span> Check Vehicle extension times are correct.</div>
 <div class="answer">
@@ -667,8 +683,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-
-<section>
+<section><h2>Puffin/Toucan Facilities</h2>
 <div class="check">
 <div class="question"><span class="qnum">50</span> Check that all Kerbside detectors are set up to detect within the area that is occupied by pedestrians waiting to cross. Ensure at least the push button and the front two rows of the tactile paving are covered by the detectors footprint.</div>
 <div class="answer">
@@ -720,7 +735,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-<div class="section-toggle"><label><input data-section-toggle="na-speed" type="checkbox"/> N/A - Hide Speed Control</label></div><section id="na-speed"><h2>Speed Control</h2>
+<section id="na-speed"><h2>Speed Control</h2>
 <div class="check">
 <div class="question"><span class="qnum">55</span> Speed Discrimination (Double SDE) - check for 3 second green extensions for vehicles travelling over 30mph up to phase maximum.</div>
 <div class="answer">
@@ -795,8 +810,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-
-<div class="section-toggle"><label><input data-section-toggle="na-utc" type="checkbox"/> N/A - Hide Urban Traffic Control</label></div><section id="na-utc"><h2>Urban Traffic Control</h2>
+<section id="na-utc"><h2>Urban Traffic Control</h2>
 <div class="check">
 <div class="question"><span class="qnum">62</span> Check that a suitable OTU and router is fitted.</div>
 <div class="answer">
@@ -807,7 +821,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
-<h2>Speed Control</h2>
+
 <div class="check">
 <div class="question"><span class="qnum">63</span> Ensure that IP address is noted in the controller log book.</div>
 <div class="answer">
@@ -839,8 +853,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-
-<div class="section-toggle"><label><input data-section-toggle="na-remote" type="checkbox"/> N/A - Hide Remote Monitoring</label></div><section id="na-remote">
+<section id="na-remote">
 <div class="check">
 <div class="question"><span class="qnum">66</span> GSM - Check that a suitable OMCU is fitted and a SIM card is provided to the Installation Contractor.</div>
 <div class="answer">
@@ -873,7 +886,6 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-
 <section>
 <div class="check">
 <div class="question"><span class="qnum">69</span> Simulate one red lamp failure. Check for additional intergreen if configured.</div>
@@ -898,8 +910,6 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 </div>
 </section>
 
-<section><h2>Miscellaneous</h2>
-</section>
 <section><h2>Miscellaneous</h2>
 <div class="check">
 <div class="question"><span class="qnum">71</span> Installation Contractor to submit cable test results/schematic cable diagram if requested by Engineer.</div>
@@ -1052,38 +1062,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </script></body>
 </html>
 
-<section>
-<h2>Final Sign Off</h2>
-<table class="header-table">
-<tr><td><b>Date/Time of Commissioning</b></td><td><input type="text"/></td></tr>
-</table>
-<h3>Engineers Signature(s)</h3>
-<table class="sign-table">
-<tr><td>Name:</td><td><input type="text"/></td><td>Company:</td><td><input type="text"/></td></tr>
-<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" height="80" id="signature-pad-1" width="400"></canvas><button id="clear-1" type="button">Clear</button></td></tr>
-<tr><td>Name:</td><td><input type="text"/></td><td>Company:</td><td><input type="text"/></td></tr>
-<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" height="80" id="signature-pad-2" width="400"></canvas><button id="clear-2" type="button">Clear</button></td></tr>
-<tr><td>Name:</td><td><input type="text"/></td><td>Company:</td><td><input type="text"/></td></tr>
-<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" height="80" id="signature-pad-3" width="400"></canvas><button id="clear-3" type="button">Clear</button></td></tr>
-<tr><td>Name:</td><td><input type="text"/></td><td>Company:</td><td><input type="text"/></td></tr>
-<tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" height="80" id="signature-pad-4" width="400"></canvas><button id="clear-4" type="button">Clear</button></td></tr>
-</table>
-<h3>Attendance (Print names)</h3>
-<table class="header-table">
-<tr><td>Essex Highways</td><td><input type="text"/></td></tr>
-<tr><td>Essex Highways</td><td><input type="text"/></td></tr>
-<tr><td>Installation</td><td><input type="text"/></td></tr>
-<tr><td>Installation</td><td><input type="text"/></td></tr>
-</table>
-</section>
-<section>
-<h2>OUTSTANDING WORK AT TIME OF COMMISSIONING</h2>
-<h3>Traffic Signals</h3>
-<textarea rows="4"></textarea>
-<h3>Civils</h3>
-<textarea rows="4"></textarea>
-<p><b>COPY AND PASS TO MAINTENANCE DEPARTMENT</b></p>
-</section>
+
 <div class="no-print">
 <button id="clear-document" type="button">Clear Document</button>
 <button onclick="window.print()" type="button">Print This Page</button>
@@ -1149,5 +1128,3 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-
-
