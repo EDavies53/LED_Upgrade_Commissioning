@@ -103,6 +103,11 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
   margin: 12px 0 !important;
   background: transparent !important;
 }
+
+.header-table td { vertical-align:middle; }
+.header-table td:first-child { padding-right:0 !important; }
+.header-table td:nth-child(2) { padding-left:0 !important; }
+.header-table input { margin-left:0 !important; }
 </style>
 </head>
 <body>
@@ -110,9 +115,9 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <h1><u>ELV LED UPGRADE COMMISSIONING CHECKLIST - CROSSINGS</u></h1>
 <p class="project-notice"><b>This form is only to be used on the LED upgrade project where no signal design or site layout changes have been undertaken.</b></p>
 <table class="header-table">
-<tr><td><b>LOCATION</b></td><td><input class="header-input" type="text"/></td></tr>
-<tr><td><b>SITE REF</b></td><td><input class="header-input" type="text"/></td></tr>
-<tr><td><b>DATE</b></td><td><input type="date"/></td></tr>
+<tr><td style="width:110px; white-space:nowrap; vertical-align:middle; padding-right:0;"><b>LOCATION</b></td><td style="padding-left:0; vertical-align:middle;"><input class="header-input" style="width:260px; margin:0;" type="text"/></td></tr>
+<tr><td style="width:110px; white-space:nowrap; vertical-align:middle; padding-right:0;"><b>SITE REF</b></td><td style="padding-left:0; vertical-align:middle;"><input class="header-input" style="width:260px; margin:0;" type="text"/></td></tr>
+<tr><td style="width:110px; white-space:nowrap; vertical-align:middle; padding-right:0;"><b>DATE</b></td><td style="padding-left:0; vertical-align:middle;"><input style="width:260px; margin:0;" type="date"/></td></tr>
 </table>
 <p>The commissioning of Traffic Signals can be divided into two parts</p>
 <p>1 The checks that can be carried out before the controller is switched on<br/>
@@ -348,7 +353,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-<h2>Signal Poles, Civil Works &amp; Miscellaneous</h2>
+
 <div class="check">
 <div class="question"><span class="qnum">20</span> For controllers without a NAL base, the controller shall be sealed with a two-part epoxy resin. (NOTE: - This must be done before or at the time of commissioning.</div>
 <div class="answer">
@@ -631,7 +636,6 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
-
 <div class="check">
 <div class="question"><span class="qnum">45</span> Check Vehicle extension times are correct.</div>
 <div class="answer">
@@ -768,7 +772,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
-<h2>Puffin/Toucan Facilities</h2>
+
 <div class="check">
 <div class="question"><span class="qnum">58</span> Where tactile signals are provided, check correct operation of all tactile units and that they have been installed on the right hand side of the bottom of the push button unit.</div>
 <div class="answer">
@@ -821,7 +825,6 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
-
 <div class="check">
 <div class="question"><span class="qnum">63</span> Ensure that IP address is noted in the controller log book.</div>
 <div class="answer">
@@ -854,7 +857,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 </div>
 </section>
 <section id="na-remote">
-<div class="check">
+<h2>Remote Monitoring</h2><div class="check">
 <div class="question"><span class="qnum">66</span> GSM - Check that a suitable OMCU is fitted and a SIM card is provided to the Installation Contractor.</div>
 <div class="answer">
 <label><input name="q_66_153" type="radio" value="YES"/> YES</label>
@@ -864,7 +867,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
-<h2>Remote Monitoring</h2>
+
 <div class="check">
 <div class="question"><span class="qnum">67</span> NON GSM - Check that a suitable communication line is connected to the OMCU.</div>
 <div class="answer">
@@ -887,7 +890,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 </div>
 </section>
 <section>
-<div class="check">
+<h2>Red Lamp Monitoring</h2><div class="check">
 <div class="question"><span class="qnum">69</span> Simulate one red lamp failure. Check for additional intergreen if configured.</div>
 <div class="answer">
 <label><input name="q_69_162" type="radio" value="YES"/> YES</label>
@@ -897,7 +900,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
-<h2>Red Lamp Monitoring</h2>
+
 <div class="check">
 <div class="question"><span class="qnum">70</span> Simulate two red lamp failures on each approach to check controller shuts down with RLM failure</div>
 <div class="answer">
@@ -909,7 +912,6 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-
 <section><h2>Miscellaneous</h2>
 <div class="check">
 <div class="question"><span class="qnum">71</span> Installation Contractor to submit cable test results/schematic cable diagram if requested by Engineer.</div>
@@ -955,7 +957,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <section>
 <h2>Final Sign Off</h2>
 <table class="header-table">
-<tr><td><b>Date/Time of Commissioning</b></td><td><input type="text"/></td></tr>
+<tr><td style="width:110px; white-space:nowrap; vertical-align:middle; padding-right:0;"><b>Date/Time of Commissioning</b></td><td style="padding-left:0; vertical-align:middle;"><input style="width:260px; margin:0;" type="text"/></td></tr>
 </table>
 <h3>Engineers Signature(s)</h3>
 <table class="sign-table">
@@ -970,10 +972,10 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 </table>
 <h3>Attendance (Print names)</h3>
 <table class="header-table">
-<tr><td>Essex Highways</td><td><input type="text"/></td></tr>
-<tr><td>Essex Highways</td><td><input type="text"/></td></tr>
-<tr><td>Installation</td><td><input type="text"/></td></tr>
-<tr><td>Installation</td><td><input type="text"/></td></tr>
+<tr><td style="width:130px; white-space:nowrap; padding-right:4px;">Essex Highways</td><td style="padding-left:0; text-align:left;"><input style="width:260px; margin:0;" type="text"/></td></tr>
+<tr><td style="width:130px; white-space:nowrap; padding-right:4px;">Essex Highways</td><td style="padding-left:0; text-align:left;"><input style="width:260px; margin:0;" type="text"/></td></tr>
+<tr><td style="width:130px; white-space:nowrap; padding-right:4px;">Installation</td><td style="padding-left:0; text-align:left;"><input style="width:260px; margin:0;" type="text"/></td></tr>
+<tr><td style="width:130px; white-space:nowrap; padding-right:4px;">Installation</td><td style="padding-left:0; text-align:left;"><input style="width:260px; margin:0;" type="text"/></td></tr>
 </table>
 </section>
 <section>
@@ -1061,8 +1063,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script></body>
 </html>
-
-
 <div class="no-print">
 <button id="clear-document" type="button">Clear Document</button>
 <button onclick="window.print()" type="button">Print This Page</button>
