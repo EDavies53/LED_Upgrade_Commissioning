@@ -108,6 +108,16 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 .header-table td:first-child { padding-right:0 !important; }
 .header-table td:nth-child(2) { padding-left:0 !important; }
 .header-table input { margin-left:0 !important; }
+
+.sign-table { table-layout:auto; }
+.sign-table td { padding:2px 4px; vertical-align:middle; }
+.sign-table td:first-child, .sign-table td:nth-child(3) { white-space:nowrap; width:1%; padding-right:3px; }
+.sign-table td:nth-child(2), .sign-table td:nth-child(4) { padding-left:0; }
+.sign-table input[type="text"] { margin:0; width:180px; }
+.sign-table .signature-pad { margin-top:2px; }
+.attendance-table td:first-child { width:1% !important; padding-right:2px !important; white-space:nowrap; }
+.attendance-table td:nth-child(2) { padding-left:0 !important; }
+.attendance-table input { margin-left:0 !important; }
 </style>
 </head>
 <body>
@@ -194,6 +204,9 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
+<h2>Layout</h2>
+<p><b>Signal Poles</b></p>
+<p>5 At each signal pole position the following should be checked:-</p>
 <div class="check">
 <div class="question"><span class="qnum">4</span> Ensure a full size plot of the signal approval is left in the controller including signed approval front sheet.</div>
 <div class="answer">
@@ -205,11 +218,8 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-<section>
-<h2>Layout</h2>
-<p><b>Signal Poles</b></p>
-<p>5 At each signal pole position the following should be checked:-</p>
-<section><h2></h2><div class="check">
+<section><div class="check">
+<div class="check">
 <div class="question"><span class="qnum">6</span> The location of the poles and associated equipment shall agree with the signal approval plan.</div>
 <div class="answer">
 <label><input name="q_6_7" type="radio" value="YES"/> YES</label>
@@ -374,8 +384,9 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
-<section id="na-22a">
-<h2>22 (A) PUFFIN &amp; NEAR SIDE TOUCAN CROSSING  <label class="heading-na"><input data-section-toggle="na-22a" type="checkbox"/> N/A</label></h2>
+<section>
+<h2>22 (A) PUFFIN &amp; NEAR SIDE TOUCAN CROSSING  <label class="heading-na"><input data-section-toggle="content-22a" type="checkbox"/> N/A</label></h2>
+<div id="content-22a">
 <table class="timings">
 <tr><th>Timing Required</th><th>Timing Criteria</th><th>Timings</th></tr>
 <tr><td><b>PERIOD 1 (Min Veh Green)</b></td><td>7 seconds for Puffins</td><td><input class="timing-input" type="text"/></td></tr>
@@ -391,9 +402,10 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <p><b>Maximum Vehicle Greens - Peak - 30 seconds - Off Peak - 20 seconds</b></p>
 <p>Peak Timings - AM - 07:00 to 09:30    Peak Timings - PM - 16:00 to 18:30</p>
 <p><b>Values to be entered by Commissioning Engineer (*)</b></p>
-</section>
-<section id="na-22b">
-<h2>22 (B) FAR SIDE TOUCAN CROSSING  <label class="heading-na"><input data-section-toggle="na-22b" type="checkbox"/> N/A</label></h2>
+</div></section>
+<section>
+<h2>22 (B) FAR SIDE TOUCAN CROSSING  <label class="heading-na"><input data-section-toggle="content-22b" type="checkbox"/> N/A</label></h2>
+<div id="content-22b">
 <table class="timings">
 <tr><th>Timing Required</th><th>Timing Criteria</th><th>Timings</th></tr>
 <tr><td><b>PERIOD I (Min Veh Green)</b></td><td>7 seconds for standalone Toucan (7 seconds for Southend B.C)</td><td><input class="timing-input" type="text"/></td></tr>
@@ -409,7 +421,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <p><b>Maximum Vehicle Greens - Peak - 30 seconds - Off Peak - 20 seconds</b></p>
 <p>Peak Timings - AM - 07:00 to 09:30    Peak Timings - PM - 16:00 to 18:30</p>
 <p><b>Values to be entered by Commissioning Engineer (*)</b></p>
-</section>
+</div></section>
 <section><h2>PART 3 ON SITE - CONTROLLER SWITCHED ON</h2>
 <div class="check">
 <div class="question"><span class="qnum">23</span> Prior to switching controller on, flash out each vehicle lamp, pedestrian green man, pedestrian red man and wait indicator to ensure that they illuminate when activated by the Traffic Signal Engineer.</div>
@@ -971,7 +983,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <tr><td>Signature:</td><td colspan="3"><canvas class="signature-pad" height="80" id="signature-pad-4" width="400"></canvas><button id="clear-4" type="button">Clear</button></td></tr>
 </table>
 <h3>Attendance (Print names)</h3>
-<table class="header-table">
+<table class="header-table attendance-table">
 <tr><td style="width:130px; white-space:nowrap; padding-right:4px;">Essex Highways</td><td style="padding-left:0; text-align:left;"><input style="width:260px; margin:0;" type="text"/></td></tr>
 <tr><td style="width:130px; white-space:nowrap; padding-right:4px;">Essex Highways</td><td style="padding-left:0; text-align:left;"><input style="width:260px; margin:0;" type="text"/></td></tr>
 <tr><td style="width:130px; white-space:nowrap; padding-right:4px;">Installation</td><td style="padding-left:0; text-align:left;"><input style="width:260px; margin:0;" type="text"/></td></tr>
