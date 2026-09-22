@@ -119,6 +119,16 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 .attendance-table td:first-child { width:1% !important; padding-right:2px !important; white-space:nowrap; }
 .attendance-table td:nth-child(2) { padding-left:0 !important; }
 .attendance-table input { margin-left:0 !important; }
+
+/* Plain section headings without the underline used by the main headings */
+.plain-heading {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  border: none !important;
+  padding-bottom: 0 !important;
+}
 </style>
 </head>
 <body>
@@ -310,7 +320,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 </section>
-<p><b>Civil Works</b></p>
+<h2 class="plain-heading">Civil Works</h2>
 <div class="check">
 <div class="question"><span class="qnum">14</span> Check all Civil items on site to include in the as-built drawing and accurately note any variations from the signal approval drawing.</div>
 <div class="answer">
@@ -321,7 +331,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
-<p><b>Miscellaneous</b></p>
+<h2 class="plain-heading">Miscellaneous</h2>
 <div class="check">
 <div class="question"><span class="qnum">15</span> Check that all signal and loop feeder cables are marked with their destination within the controller. All LV signal cable flags should be removed.</div>
 <div class="answer">
@@ -394,6 +404,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <label class="comment-label">Additional comments:</label>
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
+<h2 class="plain-heading">Timings</h2>
 <section>
 <h2>22 (A) PUFFIN &amp; NEAR SIDE TOUCAN CROSSING  <label class="heading-na"><input data-section-toggle="content-22a" type="checkbox"/> N/A</label></h2>
 <div id="content-22a">
@@ -494,7 +505,7 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 <div class="check">
-<h3>Signal Head Alignment and Illumination</h3><div class="question"><span class="qnum">29</span> The primary signal heads shall be aligned as follows:- On a high speed approach at a point 1.5m above the carriageway on the centre line 200m from the signals. Otherwise, at a point 1.5m above carriageway on the centre line 50m from the stop line.</div>
+<h2 class="plain-heading">Signal Head Alignment and Illumination</h2><div class="question"><span class="qnum">29</span> The primary signal heads shall be aligned as follows:- On a high speed approach at a point 1.5m above the carriageway on the centre line 200m from the signals. Otherwise, at a point 1.5m above carriageway on the centre line 50m from the stop line.</div>
 <div class="answer">
 <label><input name="q_29_68" type="radio" value="YES"/> YES</label>
 <label><input name="q_29_68" type="radio" value="NO"/> NO</label>
@@ -1085,68 +1096,3 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script></body>
 </html>
-<div class="no-print">
-<button id="clear-document" type="button">Clear Document</button>
-<button onclick="window.print()" type="button">Print This Page</button>
-</div>
-<script>
-function confirmRefresh() {
-  if (confirm("Are you sure you want to refresh the page?")) location.reload();
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  function setupSignaturePad(canvasId, clearId) {
-    var canvas=document.getElementById(canvasId), clearButton=document.getElementById(clearId);
-    if(!canvas || !clearButton) return null;
-    canvas.style.width="400px"; canvas.style.height="80px"; canvas.style.maxWidth="100%"; canvas.style.touchAction="none";
-    var pad=new SignaturePad(canvas, {backgroundColor:"rgb(255,255,255)", minWidth:0.8, maxWidth:2.2, throttle:0});
-    function resizeCanvas() {
-      var ratio=Math.max(window.devicePixelRatio||1,1);
-      var rect=canvas.getBoundingClientRect();
-      var data=pad.isEmpty()?null:pad.toData();
-      canvas.width=Math.round(rect.width*ratio);
-      canvas.height=Math.round(rect.height*ratio);
-      canvas.getContext("2d").setTransform(ratio,0,0,ratio,0,0);
-      if(data) pad.fromData(data); else pad.clear();
-    }
-    resizeCanvas();
-    clearButton.addEventListener("click", function(e) {
-      e.preventDefault(); e.stopPropagation(); pad.clear();
-      var img=canvas.parentNode.querySelector(".signature-print-image"); if(img) img.src="";
-    });
-    window.addEventListener("resize", resizeCanvas);
-    window.addEventListener("orientationchange", function(){setTimeout(resizeCanvas,100);});
-    return pad;
-  }
-
-  var signaturePad1=setupSignaturePad("signature-pad-1","clear-1");
-  var signaturePad2=setupSignaturePad("signature-pad-2","clear-2");
-  var signaturePad3=setupSignaturePad("signature-pad-3","clear-3");
-  var signaturePad4=setupSignaturePad("signature-pad-4","clear-4");
-
-  function makePrintImage(id) {
-    var canvas=document.getElementById(id); if(!canvas) return;
-    var img=document.createElement("img");
-    img.className="signature-print-image"; img.width=400; img.height=80;
-    try { img.src=canvas.toDataURL("image/png"); } catch(e) {}
-    canvas.parentNode.insertBefore(img,canvas.nextSibling);
-  }
-  function syncPrintImage(id) {
-    var canvas=document.getElementById(id), img=canvas && canvas.parentNode.querySelector(".signature-print-image");
-    if(canvas && img) try {img.src=canvas.toDataURL("image/png");} catch(e) {}
-  }
-  ["1","2","3","4"].forEach(function(n) {
-    makePrintImage("signature-pad-"+n);
-    var c=document.getElementById("signature-pad-"+n);
-    if(c) c.addEventListener("pointerup",function(){syncPrintImage("signature-pad-"+n);});
-  });
-
-  document.getElementById("clear-document").addEventListener("click", function(e) {
-    e.preventDefault(); e.stopPropagation();
-    document.querySelectorAll('input[type="text"], input[type="date"], textarea').forEach(function(x){x.value="";});
-    document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(function(x){x.checked=false;});
-    [signaturePad1,signaturePad2,signaturePad3,signaturePad4].forEach(function(p){if(p)p.clear();});
-    document.querySelectorAll(".signature-print-image").forEach(function(img){img.src="";});
-  });
-});
-</script>
