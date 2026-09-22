@@ -13,6 +13,7 @@ body { background-color: powderblue; font-size: 13px; margin: 12px; color:#000; 
 h1 { text-align:center; font-size:24px; }
 h2 { font-size:18px; margin-top:20px; border-bottom:1px solid #555; padding-bottom:4px; }
 h3 { font-size:15px; }
+.subheading { font-size:18px; margin-top:20px; margin-bottom:6px; border-bottom:1px solid #555; padding-bottom:4px; }
 p { margin:6px 0; }
 .header-table, .sign-table, .timings { border-collapse:collapse; width:100%; }
 .header-table td { padding:4px; }
@@ -205,8 +206,17 @@ button { padding:6px 10px; margin:3px; cursor:pointer; }
 <textarea placeholder="Enter notes here:" rows="2"></textarea>
 </div>
 <h2>Layout</h2>
-<p><b>Signal Poles</b></p>
-<p>5 At each signal pole position the following should be checked:-</p>
+<h3 class="subheading">Signal Poles</h3>
+<div class="check">
+<div class="question"><span class="qnum">5</span> At each signal pole position the following should be checked:-</div>
+<div class="answer">
+<label><input name="q_5" type="radio" value="YES"/> YES</label>
+<label><input name="q_5" type="radio" value="NO"/> NO</label>
+<label><input name="q_5" type="radio" value="N/A"/> N/A</label>
+</div>
+<label class="comment-label">Additional comments:</label>
+<textarea placeholder="Enter notes here:" rows="2"></textarea>
+</div>
 <div class="check">
 <div class="question"><span class="qnum">4</span> Ensure a full size plot of the signal approval is left in the controller including signed approval front sheet.</div>
 <div class="answer">
